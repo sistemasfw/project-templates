@@ -10,40 +10,26 @@
             }
         },
         {
-            "name": "conf-msvc-debug",
+            "name": "conf-msvc",
             "inherits": "conf-common",
-            "description": "Debug mode configuration",
-            "displayName": "MSVC (Debug)",
-            "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Debug",
-                "CMAKE_CXX_COMPILER": "cl"
-            }
-        },
-        {
-            "name": "conf-msvc-rel",
-            "inherits": "conf-common",
-            "displayName": "MSVC (Release)",
-            "description": "Release mode configuration with debug info",
-            "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Release",
-                "CMAKE_CXX_COMPILER": "cl"
-            }
+            "description": "MSVC Visual Studio 2022 x86",
+            "displayName": "Visual Studio 2022"
         }
     ],
     "buildPresets": [
         {
             "name": "debug",
-            "description": "",
+            "description": "Debug build preset",
             "displayName": "Debug",
             "configuration": "Debug",
-            "configurePreset": "conf-msvc-debug"
+            "configurePreset": "conf-msvc"
         },
         {
-            "name": "rel",
+            "name": "release",
             "description": "Release build preset",
             "displayName": "Release",
             "configuration": "RelWithDebInfo",
-            "configurePreset": "conf-msvc-rel"
+            "configurePreset": "conf-msvc"
         }
     ]
 }
