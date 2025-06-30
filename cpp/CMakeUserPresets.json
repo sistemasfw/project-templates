@@ -1,0 +1,49 @@
+{
+    "version": 2,
+    "configurePresets": [
+        {
+            "name": "conf-common",
+            "inherits": "vcpkg",
+            "hidden": true,
+            "environment": {
+                "VCPKG_ROOT": "C:/vcpkg"
+            }
+        },
+        {
+            "name": "conf-msvc-debug",
+            "inherits": "conf-common",
+            "description": "Debug mode configuration",
+            "displayName": "MSVC (Debug)",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_CXX_COMPILER": "cl"
+            }
+        },
+        {
+            "name": "conf-msvc-rel",
+            "inherits": "conf-common",
+            "displayName": "MSVC (Release)",
+            "description": "Release mode configuration with debug info",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_CXX_COMPILER": "cl"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "debug",
+            "description": "",
+            "displayName": "Debug",
+            "configuration": "Debug",
+            "configurePreset": "conf-msvc-debug"
+        },
+        {
+            "name": "rel",
+            "description": "Release build preset",
+            "displayName": "Release",
+            "configuration": "RelWithDebInfo",
+            "configurePreset": "conf-msvc-rel"
+        }
+    ]
+}
