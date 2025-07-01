@@ -13,7 +13,10 @@
             "name": "conf-msvc",
             "inherits": "conf-common",
             "description": "MSVC Visual Studio 2022 x86",
-            "displayName": "Visual Studio 2022"
+            "displayName": "Visual Studio 2022",
+            "cacheVariables": {
+                "CONVERT_CLARION_LIB": "ON"
+            }
         }
     ],
     "buildPresets": [
