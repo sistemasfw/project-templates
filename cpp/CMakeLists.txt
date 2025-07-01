@@ -2,18 +2,23 @@ cmake_minimum_required(VERSION 3.15)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-project(project-name VERSION 1.0 DESCRIPTION "secure-license-client" LANGUAGES CXX)
+project(myproject VERSION 1.0 DESCRIPTION "secure-license-client" LANGUAGES CXX)
 
 # Add Packages
-find_package(unofficial-curlpp CONFIG REQUIRED)
-find_package(nlohmann_json CONFIG REQUIRED)
+# find_package(foobar CONFIG REQUIRED)
+# find_package(package123 CONFIG REQUIRED)
+# ...
 
+# Find CPP files in src/
 file(GLOB_RECURSE SRC_FILES "src/*.cpp")
 
 #Create library
-add_library(project-name SHARED ${SRC_FILES})
+add_library(myproject SHARED ${SRC_FILES})
 
 # Link libraries
+# target_link_libraries(myproject PRIVATE foobar)
+# target_link_libraries(myproject PRIVATE package123)
+# ...
 
 #===========================================
 # Post-Build Task to convert to Clarion LIB
