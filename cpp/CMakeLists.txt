@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.15)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-project(myproject VERSION 1.0 DESCRIPTION "secure-license-client" LANGUAGES CXX)
+project(myproject VERSION 1.0 DESCRIPTION "project description" LANGUAGES CXX)
 
 # Add Packages
 # find_package(foobar CONFIG REQUIRED)
